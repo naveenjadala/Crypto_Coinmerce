@@ -65,6 +65,6 @@ Here's a simplified view of the folder structure inside the `src/` directory:
 
 ## 📸 App Preview
 
-| Home Screen                                 | Detail View                                   | Dark Mode                                   |
-| ------------------------------------------- | --------------------------------------------- | ------------------------------------------- |
-| <img src="src/assets/home.png" width="200"> | <img src="src/assets/detail.png" width="200"> | <img src="src/assets/dark.png" width="200"> |
+| Home Screen                                 | Detail View                                    | Dark Mode                                   |
+| ------------------------------------------- | ---------------------------------------------- | ------------------------------------------- |
+| <img src="src/assets/home.png" width="200"> | <img src="src/assets/details.png" width="200"> | <img src="src/assets/dark.png" width="200"> |
