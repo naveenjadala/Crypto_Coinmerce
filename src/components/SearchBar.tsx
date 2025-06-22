@@ -1,8 +1,9 @@
 import React from 'react';
+import { StyleSheet, TextInput, TextInputProps } from 'react-native';
 import styled from 'styled-components/native';
 import { useTheme } from '../theme/ThemeProvider';
 
-interface SearchProps {
+interface SearchProps extends TextInputProps {
   placeholder: string;
   onChangeText: (text: string) => void;
 }
@@ -20,10 +21,15 @@ const SearchBar = ({ placeholder, onChangeText }: SearchProps) => {
   const { theme } = useTheme();
   return (
     <Container>
-      <Input
+      <TextInput
         placeholder={placeholder}
         placeholderTextColor={theme.colors.textSecondary}
         onChangeText={onChangeText}
+        style={{
+          ...styles.inputStyle,
+          borderColor: theme.colors.text,
+          color: theme.colors.text,
+        }}
       />
     </Container>
   );
@@ -31,16 +37,15 @@ const SearchBar = ({ placeholder, onChangeText }: SearchProps) => {
 
 export default SearchBar;
 
+const styles = StyleSheet.create({
+  inputStyle: {
+    height: 44,
+    margin: 12,
+    borderWidth: 1,
+    padding: 10,
+    borderRadius: 8,
+  },
+});
 const Container = styled.View`
   padding: 10px 16px;
-  background-color: ${({ theme }) => theme.colors.background};
-`;
-
-const Input = styled.TextInput`
-  height: 44px;
-  border-radius: 8px;
-  padding: 0 12px;
-  border: 1px solid #ccc;
-  color: ${({ theme }) => theme.colors.text};
-  font-size: ${({ theme }) => theme.fontSize.base}px;
 `;

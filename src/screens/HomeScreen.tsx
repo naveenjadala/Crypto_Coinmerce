@@ -127,7 +127,7 @@ const HomeScreen = () => {
         mode={isDarkMode}
       />
       <SearchBar onChangeText={handleSearch} placeholder="Search Crypto" />
-      <View testID="refresh-indicator">
+      <View>
         <CustomFlatList
           data={filteredData}
           keyExtractor={keyExtractor}

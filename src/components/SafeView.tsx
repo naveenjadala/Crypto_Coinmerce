@@ -17,9 +17,7 @@ const SafeView = ({ children }: { children: React.ReactNode }) => {
       <SafeAreaViewStyled edges={['top']}>
         <StatusBar
           backgroundColor={
-            Platform.OS === 'ios'
-              ? theme.colors.background
-              : theme.colors.background
+            Platform.OS === 'ios' ? theme.colors.background : undefined
           }
           barStyle="light-content"
         />
